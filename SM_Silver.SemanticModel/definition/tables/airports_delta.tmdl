@@ -1,0 +1,70 @@
+table airports_delta
+	lineageTag: c6e1ff9c-bd17-42ed-92ea-5521a054471b
+	sourceLineageTag: [dbo].[airports_delta]
+
+	column id
+		dataType: string
+		lineageTag: 7b289d05-be32-4b9c-b2c4-73fcd9441f2d
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: 64b1405b-1f35-42d2-8ee2-2cb830b2576a
+		sourceLineageTag: latitude
+		summarizeBy: sum
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: e9fc4eb3-a173-487c-86cf-387b6913f503
+		sourceLineageTag: longitude
+		summarizeBy: sum
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column city_id
+		dataType: string
+		lineageTag: 69363f0d-047b-4808-a11f-99f617840b9f
+		sourceLineageTag: city_id
+		summarizeBy: none
+		sourceColumn: city_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 9e3f035b-4cf4-4548-972b-4c220d0fb6b2
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_zone_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 03a60e2a-0ddc-4f3d-8032-22bb88fdbba3
+		sourceLineageTag: time_zone_id
+		summarizeBy: none
+		sourceColumn: time_zone_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition airports_delta = entity
+		mode: directLake
+		source
+			entityName: airports_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

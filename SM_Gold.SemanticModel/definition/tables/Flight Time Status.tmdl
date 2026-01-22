@@ -1,0 +1,32 @@
+table 'Flight Time Status'
+	lineageTag: 7ca327e4-b53b-438e-8428-4fa9691f219b
+	sourceLineageTag: [dbo].[Flight Time Status]
+
+	column id
+		dataType: string
+		isHidden
+		lineageTag: bbbd47ae-0561-415f-b10b-dd9f23e0d1ef
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flight Time Status'
+		dataType: string
+		lineageTag: f84674b7-0f92-4a44-be90-eaff1bb24e25
+		sourceLineageTag: Flight Time Status
+		summarizeBy: none
+		sourceColumn: Flight Time Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Flight Time Status' = entity
+		mode: directLake
+		source
+			entityName: Flight Time Status
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

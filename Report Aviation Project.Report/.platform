@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Report Aviation Project"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c55544aa-38ad-95b3-4811-f6f8858dddd3"
+  }
+}

@@ -1,0 +1,29 @@
+table countries_delta
+	lineageTag: 54a91368-cd24-4fd8-8934-d129d72b682a
+	sourceLineageTag: [dbo].[countries_delta]
+
+	column id
+		dataType: string
+		lineageTag: 6a752d08-230c-46e5-8eb5-32b71332a6d9
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: ed4acabf-91e9-4c20-886b-d5e8f68820ef
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition countries_delta = entity
+		mode: directLake
+		source
+			entityName: countries_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_Lufthansa_Functions"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "54370065-3fde-854e-4017-72dbc23398ce"
+  }
+}

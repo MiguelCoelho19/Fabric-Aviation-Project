@@ -1,0 +1,87 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "DF_Silver_to_Gold",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Aircraft": {
+      "queryId": "8c79212f-0f71-46d5-a997-d57765f66b9a",
+      "queryName": "Aircraft",
+      "loadEnabled": false
+    },
+    "Airlines": {
+      "queryId": "4410a806-85a7-45bd-9767-4cb255826e9e",
+      "queryName": "Airlines",
+      "loadEnabled": false
+    },
+    "Airports": {
+      "queryId": "2df943be-4918-47f3-a355-aa055cfb38ca",
+      "queryName": "Airports",
+      "loadEnabled": false
+    },
+    "cities_delta": {
+      "queryId": "2b690f94-3c23-4e46-afc6-a9f40eacebe0",
+      "queryName": "cities_delta"
+    },
+    "countries_delta": {
+      "queryId": "3c745e0f-f350-4948-a408-e4278df4b85c",
+      "queryName": "countries_delta"
+    },
+    "Flight Status": {
+      "queryId": "0f536fc0-86bd-45b6-82e2-66876c0501a7",
+      "queryName": "Flight Status",
+      "loadEnabled": false
+    },
+    "headline_types_delta": {
+      "queryId": "7642eb37-9f3c-4c5c-bba8-9fc5dc2aaa17",
+      "queryName": "headline_types_delta"
+    },
+    "Headlines": {
+      "queryId": "886b9e7c-c568-4fd2-ab0f-d156fb19ab00",
+      "queryName": "Headlines",
+      "loadEnabled": false
+    },
+    "schedules_delta": {
+      "queryId": "3b601ad0-5856-4df0-84b6-7ea4024bcaa8",
+      "queryName": "schedules_delta"
+    },
+    "Flight Types": {
+      "queryId": "d954f257-5be2-4e11-a91f-1beff192c14b",
+      "queryName": "Flight Types",
+      "loadEnabled": false
+    },
+    "Flights": {
+      "queryId": "fe4e99f3-c56f-432a-8013-3612e41993d0",
+      "queryName": "Flights",
+      "loadEnabled": false
+    },
+    "Flight Time Status": {
+      "queryId": "faa903aa-a19e-40a6-ad40-64c7a9bd34df",
+      "queryName": "Flight Time Status",
+      "loadEnabled": false
+    },
+    "time_zones_delta": {
+      "queryId": "ab95b10c-f7f9-4d8b-be47-15ba14269572",
+      "queryName": "time_zones_delta"
+    },
+    "DefaultDestination": {
+      "queryId": "b7a272cd-8e77-49c5-9806-06878570984a",
+      "queryName": "DefaultDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "Dates": {
+      "queryId": "ec63a7f9-a27a-4a13-8704-a110e976fc44",
+      "queryName": "Dates",
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"2bf3a0af-3091-4696-a883-e76d8f3dbf69\",\"DatasourceId\":\"55a620e6-412f-41ef-a981-62d1275b30ad\"}"
+    }
+  ]
+}

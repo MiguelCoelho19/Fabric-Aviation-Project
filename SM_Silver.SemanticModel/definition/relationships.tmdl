@@ -1,0 +1,58 @@
+relationship 27e717b4-b7b5-43ae-b574-1d528d262440
+	fromColumn: status_delta.aircraft_id
+	toColumn: aircraft_delta.id
+
+relationship 8efbd644-f95c-99d8-f357-66f2df2bdbf8
+	fromColumn: status_delta.airline_id
+	toColumn: airlines_delta.id
+
+relationship 990258d4-e280-7d92-8f72-74fbfbc950ee
+	fromColumn: status_delta.arr_time_status_type_id
+	toColumn: time_status_types_delta.id
+
+relationship bd917a38-88ee-c0d3-b6c5-da7588df92b7
+	isActive: false
+	fromColumn: status_delta.dep_time_status_type_id
+	toColumn: time_status_types_delta.id
+
+relationship fae5bca1-a004-41f0-4d34-63caacf02892
+	fromColumn: status_delta.flight_status_type_id
+	toColumn: flight_status_types_delta.id
+
+relationship c54e9333-015f-9b9c-4a8e-880cb90bd40b
+	fromColumn: status_delta.schedule_id
+	toColumn: schedules_delta.id
+
+relationship ced845e0-e8b5-b443-f5b6-a73b05a07b37
+	fromColumn: status_delta.service_type_id
+	toColumn: service_types_delta.id
+
+relationship 11a1f064-8fbe-706c-3a9a-74473e71cce7
+	fromColumn: schedules_delta.arr_airport_id
+	toColumn: airports_delta.id
+
+relationship 1e434f7d-6792-0113-bc4e-83e6a087a80d
+	isActive: false
+	fromColumn: schedules_delta.dep_airport_id
+	toColumn: airports_delta.id
+
+relationship 671ace40-776f-f5a1-6dae-ab6c6e8eaaf6
+	fromColumn: airports_delta.city_id
+	toColumn: cities_delta.id
+
+relationship 6b0c4e94-6344-76b8-5474-3a84eb5c8c29
+	fromColumn: airports_delta.time_zone_id
+	toColumn: time_zones_delta.id
+
+relationship 533acc6f-5c52-7813-3888-ce09f32d262f
+	fromColumn: headlines_delta.headline_type_id
+	toColumn: headline_types_delta.id
+
+relationship 940d4046-c3bf-c036-86f9-bfd16288da29
+	fromColumn: headlines_delta.aircraft_id
+	toColumn: aircraft_delta.id
+
+relationship f68f6b98-0813-2ddf-ac83-3e276fac6d00
+	fromColumn: cities_delta.country_id
+	toColumn: countries_delta.id
+

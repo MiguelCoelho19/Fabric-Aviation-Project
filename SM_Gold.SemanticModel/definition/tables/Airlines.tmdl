@@ -1,0 +1,32 @@
+table Airlines
+	lineageTag: 102224f6-3f59-4db4-b317-c56d70d7012c
+	sourceLineageTag: [dbo].[Airlines]
+
+	column id
+		dataType: string
+		isHidden
+		lineageTag: 978e7781-9e00-4731-bef3-8372f8f02814
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Airline
+		dataType: string
+		lineageTag: aab90920-276e-4fd3-8c89-2bb765378bb0
+		sourceLineageTag: Airline
+		summarizeBy: none
+		sourceColumn: Airline
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Airlines = entity
+		mode: directLake
+		source
+			entityName: Airlines
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

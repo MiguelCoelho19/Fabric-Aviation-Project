@@ -1,0 +1,51 @@
+relationship ebe69ea6-0763-d3b5-f87d-c8e487bf2cb7
+	fromColumn: Flights.aircraft_id
+	toColumn: Aircraft.id
+
+relationship 39060dbe-8c78-42db-02bc-93aa80c53b09
+	isActive: false
+	fromColumn: Flights.arr_airport_id
+	toColumn: Airports.id
+
+relationship 7c6d1917-0ad1-3783-1da2-53639d9d351e
+	fromColumn: Flights.airline_id
+	toColumn: Airlines.id
+
+relationship 31fb6e2d-5aa0-7e3f-91e1-5b31d14475fc
+	isActive: false
+	fromColumn: Flights.arr_time_status_type_id
+	toColumn: 'Flight Time Status'.id
+
+relationship b39bb693-7b54-4201-7ac0-d02059f37297
+	fromColumn: Flights.dep_airport_id
+	toColumn: Airports.id
+
+relationship fbfe5d56-a78f-c1bc-bcd6-a673e6464009
+	fromColumn: Flights.dep_time_status_type_id
+	toColumn: 'Flight Time Status'.id
+
+relationship ba0fb9aa-dde3-1849-a72e-1576ad8819c1
+	fromColumn: Flights.flight_status_type_id
+	toColumn: 'Flight Status'.id
+
+relationship 0595a6a9-10c8-2eea-2b3c-12a083392d59
+	fromColumn: Flights.service_type_id
+	toColumn: 'Flight Types'.id
+
+relationship 34bbbb17-f0dd-fa97-7aef-bacc49e43248
+	fromColumn: Headlines.aircraft_id
+	toColumn: Aircraft.id
+
+relationship 54862314-7a11-4091-2615-0b190567ac1b
+	fromColumn: Headlines.Date
+	toColumn: Dates.Date
+
+relationship 477ee019-8ead-ca9a-79db-074f498ba376
+	fromColumn: Flights.'Departure Date'
+	toColumn: Dates.Date
+
+relationship af24f6eb-3c6a-2eb6-6dd0-7702a40577e4
+	isActive: false
+	fromColumn: Flights.'Arrival Date'
+	toColumn: Dates.Date
+

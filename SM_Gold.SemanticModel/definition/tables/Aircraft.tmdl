@@ -1,0 +1,41 @@
+table Aircraft
+	lineageTag: f69a04cd-8545-474f-a86d-32cf390a54e6
+	sourceLineageTag: [dbo].[Aircraft]
+
+	column id
+		dataType: string
+		isHidden
+		lineageTag: 2a22ac46-eb68-4b71-b7a8-83a4edd82f13
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Aircraft
+		dataType: string
+		lineageTag: 87b669e7-923e-404c-aa3b-b5fea42feb82
+		sourceLineageTag: Aircraft
+		summarizeBy: none
+		sourceColumn: Aircraft
+
+		annotation SummarizationSetBy = Automatic
+
+	column icao_code
+		dataType: string
+		lineageTag: 0b9dfd61-fa80-4187-b874-27abf577c997
+		sourceLineageTag: icao_code
+		summarizeBy: none
+		sourceColumn: icao_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Aircraft = entity
+		mode: directLake
+		source
+			entityName: Aircraft
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

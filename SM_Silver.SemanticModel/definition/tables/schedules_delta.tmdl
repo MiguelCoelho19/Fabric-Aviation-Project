@@ -1,0 +1,96 @@
+table schedules_delta
+	lineageTag: ba366ef6-b976-4a9f-883c-4eabd39d410b
+	sourceLineageTag: [dbo].[schedules_delta]
+
+	column duration
+		dataType: string
+		lineageTag: 51129c21-73c5-460c-8b45-2e87c33ccf42
+		sourceLineageTag: duration
+		summarizeBy: none
+		sourceColumn: duration
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_airport_id
+		dataType: string
+		lineageTag: 8bd78439-8ced-4440-b987-98c885e654ed
+		sourceLineageTag: dep_airport_id
+		summarizeBy: none
+		sourceColumn: dep_airport_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column arr_airport_id
+		dataType: string
+		lineageTag: 8352c2a0-2665-4a78-b0c6-498deb969ada
+		sourceLineageTag: arr_airport_id
+		summarizeBy: none
+		sourceColumn: arr_airport_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column days
+		dataType: string
+		lineageTag: 6603d027-9427-4016-8c04-33dfcd3cbb52
+		sourceLineageTag: days
+		summarizeBy: none
+		sourceColumn: days
+
+		annotation SummarizationSetBy = Automatic
+
+	column start_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9aedc8b9-c773-45b7-a313-48c0bc429287
+		sourceLineageTag: start_date
+		summarizeBy: none
+		sourceColumn: start_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column end_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6a9bcbbb-b179-42aa-9454-18454d5a67e2
+		sourceLineageTag: end_date
+		summarizeBy: none
+		sourceColumn: end_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dc416a65-7aed-413e-9a60-32f52883b7d0
+		sourceLineageTag: dep_time
+		summarizeBy: none
+		sourceColumn: dep_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column arr_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e2d09950-8646-4a7b-9f1f-c48143a43c6f
+		sourceLineageTag: arr_time
+		summarizeBy: none
+		sourceColumn: arr_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: string
+		lineageTag: c726db63-b6b7-43ab-869d-12a0bc4de76d
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition schedules_delta = entity
+		mode: directLake
+		source
+			entityName: schedules_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

@@ -1,0 +1,29 @@
+table time_status_types_delta
+	lineageTag: 686a06db-6d11-420f-8f79-ec274e7bebf8
+	sourceLineageTag: [dbo].[time_status_types_delta]
+
+	column id
+		dataType: string
+		lineageTag: 35b956fc-11ea-411e-891b-30d72d887489
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 03753d71-9c9f-413a-902f-1b91ff6ab4ab
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition time_status_types_delta = entity
+		mode: directLake
+		source
+			entityName: time_status_types_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

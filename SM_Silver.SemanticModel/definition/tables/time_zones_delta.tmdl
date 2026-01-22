@@ -1,0 +1,39 @@
+table time_zones_delta
+	lineageTag: fffff633-ddb4-4014-8a03-1f1687e87205
+	sourceLineageTag: [dbo].[time_zones_delta]
+
+	column utc_offset
+		dataType: string
+		lineageTag: 30e17358-891d-4340-82b8-7f1088554042
+		sourceLineageTag: utc_offset
+		summarizeBy: none
+		sourceColumn: utc_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 1fa457db-7968-4b55-b2d8-e5982ae5d96e
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ed16a7e-0149-4873-b03c-bd831c6b7e88
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition time_zones_delta = entity
+		mode: directLake
+		source
+			entityName: time_zones_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

@@ -1,0 +1,32 @@
+table 'Flight Status'
+	lineageTag: ee4062f3-d4c9-40c7-b490-be8a7f81b7bd
+	sourceLineageTag: [dbo].[Flight Status]
+
+	column id
+		dataType: string
+		isHidden
+		lineageTag: bbff3427-acf2-4459-91e2-d4808e7add15
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Flight Status Type'
+		dataType: string
+		lineageTag: 46b6e410-8a36-453e-9ffe-f7a608604f95
+		sourceLineageTag: Flight Status Type
+		summarizeBy: none
+		sourceColumn: Flight Status Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Flight Status' = entity
+		mode: directLake
+		source
+			entityName: Flight Status
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

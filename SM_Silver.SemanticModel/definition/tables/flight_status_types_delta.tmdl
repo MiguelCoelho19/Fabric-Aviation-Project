@@ -1,0 +1,29 @@
+table flight_status_types_delta
+	lineageTag: 2567417d-c39d-4ba2-8ee9-f76475f62bea
+	sourceLineageTag: [dbo].[flight_status_types_delta]
+
+	column id
+		dataType: string
+		lineageTag: 92d22417-6fa5-4317-9ed9-64420172a4c4
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 8d42495a-9ecf-40d8-8048-6f745f5d116e
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition flight_status_types_delta = entity
+		mode: directLake
+		source
+			entityName: flight_status_types_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

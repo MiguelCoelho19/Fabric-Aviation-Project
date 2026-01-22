@@ -1,0 +1,33 @@
+table 'Flight Types'
+	lineageTag: 607abbc3-ffe9-44e3-a8d0-36db00dd1e68
+	sourceLineageTag: [dbo].[Flight Types]
+
+	column 'Flight Type'
+		dataType: string
+		lineageTag: 7a462015-65b3-4920-8a48-af42e3d2bdc8
+		sourceLineageTag: Flight Type
+		summarizeBy: none
+		sourceColumn: Flight Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6b45fa9b-c9db-4140-b952-d545451710e9
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Flight Types' = entity
+		mode: directLake
+		source
+			entityName: Flight Types
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

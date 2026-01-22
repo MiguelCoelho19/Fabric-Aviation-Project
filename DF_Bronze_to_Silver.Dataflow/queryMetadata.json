@@ -1,0 +1,159 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Dataflow_Monthly",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "aircraft_delta": {
+      "queryId": "93219e4e-7fc2-490c-a383-a7938376c629",
+      "queryName": "aircraft_delta",
+      "loadEnabled": false
+    },
+    "airlines_delta": {
+      "queryId": "c83df91c-3975-41a1-8e56-31710935fc8e",
+      "queryName": "airlines_delta",
+      "loadEnabled": false
+    },
+    "airports_delta": {
+      "queryId": "96c7bed2-6c83-49ec-8bb4-2b385c7d2842",
+      "queryName": "airports_delta",
+      "loadEnabled": false
+    },
+    "cities_delta": {
+      "queryId": "eeae07ce-2bfb-4df4-9aef-d984ae82273f",
+      "queryName": "cities_delta",
+      "loadEnabled": false
+    },
+    "countries_delta": {
+      "queryId": "64c4ba2d-eb7f-4235-a9ee-99362d52cc63",
+      "queryName": "countries_delta",
+      "loadEnabled": false
+    },
+    "time_zones_delta": {
+      "queryId": "cb2daa88-6db7-40a7-8ef5-db0ded8d76f8",
+      "queryName": "time_zones_delta",
+      "loadEnabled": false
+    },
+    "airlines_delta_DataDestination": {
+      "queryId": "14e7985f-0538-4fa6-b5a8-4fae9c29043d",
+      "queryName": "airlines_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "aircraft_delta_DataDestination": {
+      "queryId": "590bde04-5419-48cd-911f-d1cea5b0386f",
+      "queryName": "aircraft_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "countries_delta_DataDestination": {
+      "queryId": "18ecb4dd-0de1-4d1c-9c8d-aa60b31e3b4b",
+      "queryName": "countries_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "time_zones_delta_DataDestination": {
+      "queryId": "959d329d-9a66-4274-9f34-7c8191b0973e",
+      "queryName": "time_zones_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "cities_delta_DataDestination": {
+      "queryId": "a7fe48f3-d925-4338-bf5c-c3e2ea26a405",
+      "queryName": "cities_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "airports_delta_DataDestination": {
+      "queryId": "54025241-bfff-492d-8773-78b629004f99",
+      "queryName": "airports_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "headlines_delta": {
+      "queryId": "d548f374-a0d2-48d4-9166-afc348ca7165",
+      "queryName": "headlines_delta",
+      "loadEnabled": false
+    },
+    "headline_types_delta": {
+      "queryId": "9ac7e793-04e7-420c-b309-cd1f871a87a8",
+      "queryName": "headline_types_delta",
+      "loadEnabled": false
+    },
+    "schedules_delta": {
+      "queryId": "98f80e26-c5df-4466-bc45-446b6401097f",
+      "queryName": "schedules_delta",
+      "loadEnabled": false
+    },
+    "status_delta": {
+      "queryId": "44640d51-5c68-4fa1-80b9-c4568c7ca765",
+      "queryName": "status_delta",
+      "loadEnabled": false
+    },
+    "time_status_types_delta": {
+      "queryId": "59914d99-f62c-4388-b6a3-42b14d80b904",
+      "queryName": "time_status_types_delta",
+      "loadEnabled": false
+    },
+    "flight_status_types_delta": {
+      "queryId": "9a0ff42f-e872-4ffd-b45f-297f6ab9b461",
+      "queryName": "flight_status_types_delta",
+      "loadEnabled": false
+    },
+    "service_types_delta": {
+      "queryId": "71fa76e9-1ecb-4063-ac7e-b6f6799a08b4",
+      "queryName": "service_types_delta",
+      "loadEnabled": false
+    },
+    "headline_types_delta_DataDestination": {
+      "queryId": "9e896509-0db6-4b77-9818-0572a6e29e56",
+      "queryName": "headline_types_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "headlines_delta_DataDestination": {
+      "queryId": "4c0f2b55-cce5-439b-b915-271e2395a951",
+      "queryName": "headlines_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "time_status_types_delta_DataDestination": {
+      "queryId": "73acbc9f-a6ed-4fc3-b3ab-ebf28ec59b80",
+      "queryName": "time_status_types_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "schedules_delta_DataDestination": {
+      "queryId": "96bca902-8b26-4092-8cba-71abd7119b60",
+      "queryName": "schedules_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "status_delta_DataDestination": {
+      "queryId": "523b05e9-f294-40eb-aa0a-611d5ff91a58",
+      "queryName": "status_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "flight_status_types_delta_DataDestination": {
+      "queryId": "57e1440b-a32d-4be6-a73c-d7ac156fcde5",
+      "queryName": "flight_status_types_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    },
+    "service_types_delta_DataDestination": {
+      "queryId": "c6e4026a-d123-42fd-8717-7a4ad9177758",
+      "queryName": "service_types_delta_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"2bf3a0af-3091-4696-a883-e76d8f3dbf69\",\"DatasourceId\":\"8a7ebf32-d79b-417c-8da2-73fa31707d3f\"}"
+    }
+  ]
+}

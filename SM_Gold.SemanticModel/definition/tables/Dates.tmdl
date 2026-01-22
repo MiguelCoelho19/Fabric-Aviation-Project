@@ -1,0 +1,85 @@
+table Dates
+	lineageTag: 2c88d675-1805-4f13-8493-d1b8b8049332
+	sourceLineageTag: [dbo].[Dates]
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9320df02-ff22-4773-9499-ce5e18f53238
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e2b03d1e-8807-4223-88f0-cb9b54642fe0
+		sourceLineageTag: Year
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column MonthKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 674e2ed9-f136-4912-bef7-7d22cd8191cd
+		sourceLineageTag: MonthKey
+		summarizeBy: none
+		sourceColumn: MonthKey
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column Day
+		dataType: string
+		lineageTag: 6ae3c034-e25d-4564-89db-1949d3c6788b
+		sourceLineageTag: Day
+		summarizeBy: none
+		sourceColumn: Day
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: string
+		lineageTag: d2ff80e2-0455-44d2-8e67-d60183b62898
+		sourceLineageTag: Month
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: MonthKey
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy Calendar
+		lineageTag: 8956f019-81bb-449e-88a2-41cde2a22f67
+
+		level Year
+			lineageTag: 14594ab7-6c44-4e83-b42e-6d1f82309579
+			column: Year
+
+		level Month
+			lineageTag: c2b7dccf-3285-480f-8064-4517ca4ddcd9
+			column: Month
+
+		level Day
+			lineageTag: 2a380b80-fd0c-48d9-af82-509c46d4f9a7
+			column: Day
+
+		changedProperty = Name
+
+	partition Dates = entity
+		mode: directLake
+		source
+			entityName: Dates
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

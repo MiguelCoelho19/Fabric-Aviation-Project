@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "NB_Lufthansa_General_Import"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8d41ec06-8780-ab1c-484b-83dc651b205b"
+  }
+}

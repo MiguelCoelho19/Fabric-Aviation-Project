@@ -1,0 +1,205 @@
+table Flights
+	lineageTag: 96125bd9-247c-4eaa-8f2a-e0a47b6a6a33
+	sourceLineageTag: [dbo].[Flights]
+
+	measure 'On Time and Early Flights' = ```
+			
+			CALCULATE(
+			    COUNTROWS('Flights'),
+			    'Flight Time Status'[Flight Time Status] = "Flight Early" || 'Flight Time Status'[Flight Time Status] = "Flight On Time" 
+			)
+			```
+		formatString: 0
+		lineageTag: cbec5b9f-8ca5-4bb1-a9d1-308bc0e64d5c
+
+		changedProperty = Name
+
+	measure 'Average Delay Minutes' =
+			
+			CALCULATE(
+			    AVERAGEX(
+			        'Flights',
+			        DATEDIFF('Flights'[Schedule Departure Time], 'Flights'[Departure Time], MINUTE)
+			    ),
+			    'Flight Time Status'[Flight Time Status] = "Flight Delayed"
+			)
+		formatString: 0
+		lineageTag: 38fd1202-3843-4d1f-9660-8d012d5c798c
+
+		changedProperty = Name
+
+	column 'Departure Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e17b014d-64a1-4608-a921-17ca17a77e36
+		sourceLineageTag: Departure Time
+		summarizeBy: none
+		sourceColumn: Departure Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2d7830fe-7356-48c3-8318-56e911c76f12
+		sourceLineageTag: Arrival Time
+		summarizeBy: none
+		sourceColumn: Arrival Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column airline_id
+		dataType: string
+		isHidden
+		lineageTag: c60c6eea-ca19-40a6-991c-2327b1938377
+		sourceLineageTag: airline_id
+		summarizeBy: none
+		sourceColumn: airline_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column aircraft_id
+		dataType: string
+		isHidden
+		lineageTag: f39c1b21-1511-4abb-a15f-07951f0ad4f5
+		sourceLineageTag: aircraft_id
+		summarizeBy: none
+		sourceColumn: aircraft_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column schedule_id
+		dataType: string
+		lineageTag: c2fcab53-9c84-44c8-9660-279f64a3a452
+		sourceLineageTag: schedule_id
+		summarizeBy: none
+		sourceColumn: schedule_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_type_id
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0375b713-2aa1-4fca-9037-876744f91a07
+		sourceLineageTag: service_type_id
+		summarizeBy: none
+		sourceColumn: service_type_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column flight_status_type_id
+		dataType: string
+		isHidden
+		lineageTag: 7ab5ef38-09dc-4d75-9a4a-bac0aea5b8c8
+		sourceLineageTag: flight_status_type_id
+		summarizeBy: none
+		sourceColumn: flight_status_type_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_time_status_type_id
+		dataType: string
+		isHidden
+		lineageTag: 59afc2ff-0d81-45dd-b32b-3fc847714ba2
+		sourceLineageTag: dep_time_status_type_id
+		summarizeBy: none
+		sourceColumn: dep_time_status_type_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column arr_time_status_type_id
+		dataType: string
+		isHidden
+		lineageTag: d2d9dc48-8d49-4392-9ca2-4f9721e72ee2
+		sourceLineageTag: arr_time_status_type_id
+		summarizeBy: none
+		sourceColumn: arr_time_status_type_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_airport_id
+		dataType: string
+		isHidden
+		lineageTag: c8adfc9d-f1fe-4e2e-9cc4-032d30b3e2f6
+		sourceLineageTag: dep_airport_id
+		summarizeBy: none
+		sourceColumn: dep_airport_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column arr_airport_id
+		dataType: string
+		isHidden
+		lineageTag: 2215f31b-08d8-4743-977d-af3f86736fff
+		sourceLineageTag: arr_airport_id
+		summarizeBy: none
+		sourceColumn: arr_airport_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Schedule Departure Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d0e5accc-5794-4dbf-b30c-a60b27916c5a
+		sourceLineageTag: Schedule Departure Time
+		summarizeBy: none
+		sourceColumn: Schedule Departure Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Schedule Arrival Time'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5732f7af-fe1c-4298-ab25-6f3f854969e4
+		sourceLineageTag: Schedule Arrival Time
+		summarizeBy: none
+		sourceColumn: Schedule Arrival Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Departure Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6c3521f6-124f-4fe7-b5b0-a68ef4243fb9
+		sourceLineageTag: Departure Date
+		summarizeBy: none
+		sourceColumn: Departure Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c6a9267c-6b1e-4636-971b-8c85a09e6b11
+		sourceLineageTag: Arrival Date
+		summarizeBy: none
+		sourceColumn: Arrival Date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Flights = entity
+		mode: directLake
+		source
+			entityName: Flights
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

@@ -1,0 +1,202 @@
+{
+  "config": "{\"version\":\"5.68\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU11\",\"type\":2,\"version\":{\"visual\":\"2.4.0\",\"report\":\"3.0.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY25SU11",
+            "path": "BaseThemes/CY25SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "Lufthansa-Logo8869063200258619.png",
+            "path": "Lufthansa-Logo8869063200258619.png",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Home Page",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "439c6e6a4b682d7075e6",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"111686010626b0894816\",\"layouts\":[{\"id\":0,\"position\":{\"x\":244.09703504043125,\"y\":0.8625336927223719,\"z\":7000,\"width\":514.0700808625337,\"height\":359.6765498652291,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedBarChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Flights.schedule_id)\"}],\"Series\":[{\"queryRef\":\"Flight Time Status.Flight Time Status\"}],\"Category\":[{\"queryRef\":\"Airlines.Airline\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0},{\"Name\":\"f1\",\"Entity\":\"Flight Time Status\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"Airlines\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5},\"Name\":\"CountNonNull(Flights.schedule_id)\",\"NativeReferenceName\":\"Count of Flights\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Flight Time Status\"},\"Name\":\"Flight Time Status.Flight Time Status\",\"NativeReferenceName\":\"Flight Time Status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Airline\"},\"Name\":\"Airlines.Airline\",\"NativeReferenceName\":\"Airline\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Flights.schedule_id)\":{\"displayName\":\"Count of Flights\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of Flights by Airline and Flight Time Status  for Departures'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 359.68,
+          "width": 514.07,
+          "x": 244.10,
+          "y": 0.86,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"1e3e43e020565a0ba245\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":244,\"height\":154,\"z\":5000,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceFile\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Lufthansa-Logo.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Lufthansa-Logo8869063200258619.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.00,
+          "width": 244.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"2b35dde77a11c3233731\",\"layouts\":[{\"id\":0,\"position\":{\"x\":758.3655913978495,\"y\":360.60215053763443,\"z\":2000,\"width\":521.6344086021505,\"height\":359.2258064516129,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Aircraft.Aircraft\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Flights.schedule_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Aircraft\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Aircraft\"},\"Name\":\"Aircraft.Aircraft\",\"NativeReferenceName\":\"Aircraft\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5},\"Name\":\"CountNonNull(Flights.schedule_id)\",\"NativeReferenceName\":\"Count of Flights\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Flights.schedule_id)\":{\"displayName\":\"Count of Flights\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[{\"name\":\"2e0fb5764999be8418a8\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Aircraft\"}},\"Property\":\"Aircraft\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Aircraft\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Aircraft\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 359.23,
+          "width": 521.63,
+          "x": 758.37,
+          "y": 360.60,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"4250bf0ba2e2d32dc072\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":154.39353099730457,\"z\":3000,\"width\":244.09703504043125,\"height\":69.86522911051213,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Flight Types.Flight Type\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flight Types\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Flight Type\"},\"Name\":\"Flight Types.Flight Type\",\"NativeReferenceName\":\"Flight Type\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flight Types\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Flight Type\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Cargo'\"}}]]}}}]}}}}]}}}",
+          "filters": "[{\"name\":\"4422415e73929a40e350\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Flight Types\"}},\"Property\":\"Flight Type\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flight Types\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Flight Type\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 69.87,
+          "width": 244.10,
+          "x": 0.00,
+          "y": 154.39,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"71881978c76c1c5ba393\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":224.2587601078167,\"z\":0,\"width\":244.09703504043125,\"height\":154.39353099730457,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Min(Flights.schedule_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5},\"Name\":\"Min(Flights.schedule_id)\",\"NativeReferenceName\":\"Count of Flights\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5}}}]},\"columnProperties\":{\"Min(Flights.schedule_id)\":{\"displayName\":\"Count of Flights\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 154.39,
+          "width": 244.10,
+          "x": 0.00,
+          "y": 224.26,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"74275fd71500794655e0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.8625336927223719,\"y\":378.65229110512126,\"z\":6000,\"width\":243.23450134770889,\"height\":154.39353099730457,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Flights.Average Delay Minutes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Average Delay Minutes\"},\"Name\":\"Flights.Average Delay Minutes\",\"NativeReferenceName\":\"Average Delay Minutes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Average Delay Minutes\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 154.39,
+          "width": 243.23,
+          "x": 0.86,
+          "y": 378.65,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"90d58c92487d77da4389\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":533.0458221024259,\"z\":4000,\"width\":244.09703504043125,\"height\":187.16981132075472,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"gauge\",\"projections\":{\"MaxValue\":[{\"queryRef\":\"CountNonNull(Flights.schedule_id)\"}],\"Y\":[{\"queryRef\":\"Flights.On Time and Early Flights\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5},\"Name\":\"CountNonNull(Flights.schedule_id)\",\"NativeReferenceName\":\"Count of Flights\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"On Time and Early Flights\"},\"Name\":\"Flights.On Time and Early Flights\",\"NativeReferenceName\":\"On Time and Early Flights\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"On Time and Early Flights\"}}}]},\"columnProperties\":{\"CountNonNull(Flights.schedule_id)\":{\"displayName\":\"Count of Flights\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of On Time and Early Flights'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 187.17,
+          "width": 244.10,
+          "x": 0.00,
+          "y": 533.05,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"b4f38730e34558cb3ee9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":244.09703504043125,\"y\":359.6765498652291,\"z\":8000,\"width\":514.0700808625337,\"height\":359.6765498652291,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"ribbonChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dates.Calendar.Year\"},{\"queryRef\":\"Dates.Calendar.Month\"},{\"queryRef\":\"Dates.Calendar.Day\",\"active\":true}],\"Series\":[{\"queryRef\":\"Airlines.Airline\"}],\"Y\":[{\"queryRef\":\"CountNonNull(Flights.schedule_id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dates\",\"Type\":0},{\"Name\":\"a\",\"Entity\":\"Airlines\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Year\"},\"Name\":\"Dates.Calendar.Year\",\"NativeReferenceName\":\"Calendar Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Month\"},\"Name\":\"Dates.Calendar.Month\",\"NativeReferenceName\":\"Calendar Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Day\"},\"Name\":\"Dates.Calendar.Day\",\"NativeReferenceName\":\"Calendar Day\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Airline\"},\"Name\":\"Airlines.Airline\",\"NativeReferenceName\":\"Airline\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5},\"Name\":\"CountNonNull(Flights.schedule_id)\",\"NativeReferenceName\":\"Count of Flights\"}]},\"columnProperties\":{\"CountNonNull(Flights.schedule_id)\":{\"displayName\":\"Count of Flights\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 359.68,
+          "width": 514.07,
+          "x": 244.10,
+          "y": 359.68,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"efab7849a8ae198a40ba\",\"layouts\":[{\"id\":0,\"position\":{\"x\":758.204081632653,\"y\":0,\"z\":1000,\"width\":521.6326530612245,\"height\":360,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"hundredPercentStackedBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Airports.Airport\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Flights.schedule_id)\"}],\"Series\":[{\"queryRef\":\"Flight Time Status.Flight Time Status\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Airports\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"Flights\",\"Type\":0},{\"Name\":\"f1\",\"Entity\":\"Flight Time Status\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Airport\"},\"Name\":\"Airports.Airport\",\"NativeReferenceName\":\"Airport\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5},\"Name\":\"CountNonNull(Flights.schedule_id)\",\"NativeReferenceName\":\"Count of Flights\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Flight Time Status\"},\"Name\":\"Flight Time Status.Flight Time Status\",\"NativeReferenceName\":\"Flight Time Status\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"schedule_id\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Flights.schedule_id)\":{\"displayName\":\"Count of Flights\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Count of Flights by Airport and Flight Time Status for Departures'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 521.63,
+          "x": 758.20,
+          "y": 0.00,
+          "z": 1000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Headlines",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "beb916eaa20147bd4c84",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"02c42ad124d2e9a876ed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":154.1505376344086,\"z\":1000,\"width\":518.8817204301075,\"height\":216.08602150537635,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Y\":[{\"queryRef\":\"CountNonNull(Headlines.Headline)\"}],\"Category\":[{\"queryRef\":\"Headlines.Airline\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5},\"Name\":\"CountNonNull(Headlines.Headline)\",\"NativeReferenceName\":\"Headline\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Airline\"},\"Name\":\"Headlines.Airline\",\"NativeReferenceName\":\"Airline\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 10 Count of Headlines by Airline'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Headlines\"}},\"Property\":\"Airline\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Airline\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Airline\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 216.09,
+          "width": 518.88,
+          "x": 0.00,
+          "y": 154.15,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"1b7a3f38c0dec0149995\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"width\":244,\"height\":154,\"z\":0,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceFile\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Lufthansa-Logo.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Lufthansa-Logo8869063200258619.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 154.00,
+          "width": 244.00,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"54f3541fdd87dc034126\",\"layouts\":[{\"id\":0,\"position\":{\"x\":518.8817204301075,\"y\":0,\"z\":4000,\"width\":761.1182795698925,\"height\":370.23655913978496,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Aircraft.Aircraft\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Headlines.Headline)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Aircraft\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Aircraft\"},\"Name\":\"Aircraft.Aircraft\",\"NativeReferenceName\":\"Aircraft\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5},\"Name\":\"CountNonNull(Headlines.Headline)\",\"NativeReferenceName\":\"Count of Headlines\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5}}}]},\"columnProperties\":{\"CountNonNull(Headlines.Headline)\":{\"displayName\":\"Count of Headlines\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 10 Count of Headlines by Aircraft'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Aircraft\"}},\"Property\":\"Aircraft\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Aircraft\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Aircraft\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"a\",\"Entity\":\"Aircraft\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Aircraft\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 370.24,
+          "width": 761.12,
+          "x": 518.88,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"671456db7c6c97b2839a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.1290322580645,\"y\":77.0752688172043,\"z\":6000,\"width\":258.752688172043,\"height\":77.0752688172043,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Headlines.Headline Type\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline Type\"},\"Name\":\"Headlines.Headline Type\",\"NativeReferenceName\":\"Headline Type\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[{\"name\":\"9fc3847c803ecb204355\",\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dates\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Year\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dates\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"cachedDisplayNames\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dates\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}},\"displayName\":\"(Blank)\"}],\"howCreated\":1,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 77.08,
+          "width": 258.75,
+          "x": 260.13,
+          "y": 77.08,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"a81668a13dbc379247a6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":518.8817204301075,\"y\":370.23655913978496,\"z\":3000,\"width\":761.1182795698925,\"height\":349.59139784946234,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Dates.Calendar.Year\",\"active\":true},{\"queryRef\":\"Dates.Calendar.Month\"}],\"Y\":[{\"queryRef\":\"CountNonNull(Headlines.Headline)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dates\",\"Type\":0},{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Year\"},\"Name\":\"Dates.Calendar.Year\",\"NativeReferenceName\":\"Calendar Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Month\"},\"Name\":\"Dates.Calendar.Month\",\"NativeReferenceName\":\"Calendar Month\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5},\"Name\":\"CountNonNull(Headlines.Headline)\",\"NativeReferenceName\":\"Count of Headlines\"}]},\"columnProperties\":{\"CountNonNull(Headlines.Headline)\":{\"displayName\":\"Count of Headlines\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 349.59,
+          "width": 761.12,
+          "x": 518.88,
+          "y": 370.24,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"c33d7588cb9303b9435b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":370.23655913978496,\"z\":2000,\"width\":518.8817204301075,\"height\":349.59139784946234,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Headlines.Location\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(Headlines.Headline)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Location\"},\"Name\":\"Headlines.Location\",\"NativeReferenceName\":\"Location\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5},\"Name\":\"CountNonNull(Headlines.Headline)\",\"NativeReferenceName\":\"Headline\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Top 10 Count of Headlines by Location'\"}}}}}]}}}",
+          "filters": "[{\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Headlines\"}},\"Property\":\"Location\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Location\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Headline\"}},\"Function\":5}}}],\"Top\":10}}},\"Type\":2},{\"Name\":\"h\",\"Entity\":\"Headlines\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"h\"}},\"Property\":\"Location\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":0,\"isHiddenInViewMode\":false}]",
+          "height": 349.59,
+          "width": 518.88,
+          "x": 0.00,
+          "y": 370.24,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"c8bf83cfeeba92225b20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":260.1290322580645,\"y\":0,\"z\":5000,\"width\":258.752688172043,\"height\":77.0752688172043,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"Dates.Calendar.Year\",\"active\":true},{\"queryRef\":\"Dates.Calendar.Month\"},{\"queryRef\":\"Dates.Calendar.Day\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dates\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Year\"},\"Name\":\"Dates.Calendar.Year\",\"NativeReferenceName\":\"Calendar Year\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Month\"},\"Name\":\"Dates.Calendar.Month\",\"NativeReferenceName\":\"Calendar Month\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Day\"},\"Name\":\"Dates.Calendar.Day\",\"NativeReferenceName\":\"Calendar Day\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[{\"name\":\"9fc3847c803ecb204355\",\"expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dates\"}},\"Hierarchy\":\"Calendar\"}},\"Level\":\"Year\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"Dates\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Not\":{\"Expression\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Year\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"null\"}}]]}}}}}]},\"type\":\"Categorical\",\"cachedDisplayNames\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Dates\"}},\"Property\":\"Year\"}},\"Right\":{\"Literal\":{\"Value\":\"null\"}}}}},\"displayName\":\"(Blank)\"}],\"howCreated\":0,\"objects\":{\"general\":[{\"properties\":{\"isInvertedSelectionMode\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"isHiddenInViewMode\":false}]",
+          "height": 77.08,
+          "width": 258.75,
+          "x": 260.13,
+          "y": 0.00,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+table aircraft_delta
+	lineageTag: 85f381ea-2e2a-46a2-b237-d72e06b3e4f2
+	sourceLineageTag: [dbo].[aircraft_delta]
+
+	column id
+		dataType: string
+		lineageTag: 6e6c70c9-48a5-4894-a16c-3bc2f07922d2
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 7d814cd8-b7c5-4c71-8a94-a210bc0f8248
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column icao_code
+		dataType: string
+		lineageTag: a2416f93-8900-46ad-8eb0-b06802a44edf
+		sourceLineageTag: icao_code
+		summarizeBy: none
+		sourceColumn: icao_code
+
+		annotation SummarizationSetBy = Automatic
+
+	partition aircraft_delta = entity
+		mode: directLake
+		source
+			entityName: aircraft_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

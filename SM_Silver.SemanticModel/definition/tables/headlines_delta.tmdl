@@ -1,0 +1,67 @@
+table headlines_delta
+	lineageTag: fb357a95-e9d8-4421-aa0d-c32cadb79fe3
+	sourceLineageTag: [dbo].[headlines_delta]
+
+	column airline_name
+		dataType: string
+		lineageTag: 42627335-8a0d-4a70-a13e-31c57bb56a91
+		sourceLineageTag: airline_name
+		summarizeBy: none
+		sourceColumn: airline_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: da38cefe-697f-453b-81b9-06c0ef8ffca3
+		sourceLineageTag: location
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d34dd459-ad31-4c29-9580-b2b71d9d631a
+		sourceLineageTag: date
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+	column info
+		dataType: string
+		lineageTag: b238b8a1-f94c-40a0-95c5-9bfa08e4e401
+		sourceLineageTag: info
+		summarizeBy: none
+		sourceColumn: info
+
+		annotation SummarizationSetBy = Automatic
+
+	column headline_type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b1d76fd5-f41f-45e8-85b7-a30a4301bf8f
+		sourceLineageTag: headline_type_id
+		summarizeBy: none
+		sourceColumn: headline_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column aircraft_id
+		dataType: string
+		lineageTag: 0495f409-b2b0-4ff3-8827-e9920297a2fd
+		sourceLineageTag: aircraft_id
+		summarizeBy: none
+		sourceColumn: aircraft_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition headlines_delta = entity
+		mode: directLake
+		source
+			entityName: headlines_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

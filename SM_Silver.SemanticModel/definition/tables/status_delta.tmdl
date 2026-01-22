@@ -1,0 +1,114 @@
+table status_delta
+	lineageTag: 5280dd80-5a4f-4a55-8458-de7f60eda03e
+	sourceLineageTag: [dbo].[status_delta]
+
+	column source_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b3febf27-13b2-4686-b7b2-63d89f6282c7
+		sourceLineageTag: source_time
+		summarizeBy: none
+		sourceColumn: source_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f98ec671-f14b-46eb-88fd-f21bbc114c61
+		sourceLineageTag: dep_time
+		summarizeBy: none
+		sourceColumn: dep_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column arr_time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 0babfcbc-da45-429d-b2e7-c0351d947e29
+		sourceLineageTag: arr_time
+		summarizeBy: none
+		sourceColumn: arr_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column airline_id
+		dataType: string
+		lineageTag: c6024130-5fb2-48d1-b093-082da9a502ad
+		sourceLineageTag: airline_id
+		summarizeBy: none
+		sourceColumn: airline_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column flight_id
+		dataType: string
+		lineageTag: 58bb83db-65ed-4cf1-861c-bdcc26a532e6
+		sourceLineageTag: flight_id
+		summarizeBy: none
+		sourceColumn: flight_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column aircraft_id
+		dataType: string
+		lineageTag: 95a75503-03b0-40e0-9ff8-bd5a83b3b599
+		sourceLineageTag: aircraft_id
+		summarizeBy: none
+		sourceColumn: aircraft_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column schedule_id
+		dataType: string
+		lineageTag: ef7e7e52-a089-4745-95db-e7ef153aaa46
+		sourceLineageTag: schedule_id
+		summarizeBy: none
+		sourceColumn: schedule_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column service_type_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f46ba6c5-390f-4199-91fe-ba92ac9b23ae
+		sourceLineageTag: service_type_id
+		summarizeBy: none
+		sourceColumn: service_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column flight_status_type_id
+		dataType: string
+		lineageTag: a07bb7ca-ca22-45f2-b535-a892d50f8a52
+		sourceLineageTag: flight_status_type_id
+		summarizeBy: none
+		sourceColumn: flight_status_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dep_time_status_type_id
+		dataType: string
+		lineageTag: 2830663f-79cf-437f-ace6-b9824478d49e
+		sourceLineageTag: dep_time_status_type_id
+		summarizeBy: none
+		sourceColumn: dep_time_status_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column arr_time_status_type_id
+		dataType: string
+		lineageTag: 6f53ddcc-b35e-4932-b44c-6953da28e678
+		sourceLineageTag: arr_time_status_type_id
+		summarizeBy: none
+		sourceColumn: arr_time_status_type_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition status_delta = entity
+		mode: directLake
+		source
+			entityName: status_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

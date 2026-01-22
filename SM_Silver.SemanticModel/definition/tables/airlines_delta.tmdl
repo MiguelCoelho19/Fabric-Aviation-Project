@@ -1,0 +1,29 @@
+table airlines_delta
+	lineageTag: 16f2d411-8b8d-4a7e-9393-45b31b0f58dc
+	sourceLineageTag: [dbo].[airlines_delta]
+
+	column id
+		dataType: string
+		lineageTag: 7f9e8ef9-94fa-4211-89e3-b68c4dd35e21
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 3aff1786-9611-4e20-aa6a-0ef05ab70836
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition airlines_delta = entity
+		mode: directLake
+		source
+			entityName: airlines_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+

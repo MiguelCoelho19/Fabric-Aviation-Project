@@ -1,0 +1,69 @@
+table Headlines
+	lineageTag: 41dd7102-5de9-4d1f-9408-704121b88743
+	sourceLineageTag: [dbo].[Headlines]
+
+	column Airline
+		dataType: string
+		lineageTag: 8e72e4b3-85b8-4e23-9cd7-407ab8dcb8fb
+		sourceLineageTag: Airline
+		summarizeBy: none
+		sourceColumn: Airline
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 69aec52d-444a-4cf4-9ade-16484c7e9179
+		sourceLineageTag: Location
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 359e95a9-445a-4045-92e9-8f831d470fa6
+		sourceLineageTag: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Headline
+		dataType: string
+		lineageTag: e5cb26a6-2285-4d27-a96b-0014f5c437f2
+		sourceLineageTag: Headline
+		summarizeBy: none
+		sourceColumn: Headline
+
+		annotation SummarizationSetBy = Automatic
+
+	column aircraft_id
+		dataType: string
+		isHidden
+		lineageTag: bdcbbe99-f4a3-482a-8930-ff1495460d00
+		sourceLineageTag: aircraft_id
+		summarizeBy: none
+		sourceColumn: aircraft_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Headline Type'
+		dataType: string
+		lineageTag: 938454f4-b836-4822-853b-89133ac0e0c8
+		sourceLineageTag: Headline Type
+		summarizeBy: none
+		sourceColumn: Headline Type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Headlines = entity
+		mode: directLake
+		source
+			entityName: Headlines
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

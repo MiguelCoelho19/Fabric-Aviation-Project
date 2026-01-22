@@ -1,0 +1,90 @@
+table Airports
+	lineageTag: f9adffb7-15c4-48f1-9524-874e171aa232
+	sourceLineageTag: [dbo].[Airports]
+
+	column id
+		dataType: string
+		isHidden
+		lineageTag: ec830dd5-f087-4d56-9f68-b187b174ada7
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: 40192f2d-e3d6-4181-9323-525a23f38b6b
+		sourceLineageTag: Latitude
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 82bac536-e878-49e9-a7a4-2f204a2b95ec
+		sourceLineageTag: Longitude
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Airport
+		dataType: string
+		lineageTag: 9336ed8b-88e4-4da9-9075-b5ced5aa74e0
+		sourceLineageTag: Airport
+		summarizeBy: none
+		sourceColumn: Airport
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time Zone UTC Offset'
+		dataType: string
+		lineageTag: 2edb4c4d-5302-45ff-9248-debc982ad570
+		sourceLineageTag: Time Zone UTC Offset
+		summarizeBy: none
+		sourceColumn: Time Zone UTC Offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Time Zone'
+		dataType: string
+		lineageTag: c6e3b2be-3597-41aa-aae1-d82d3150207a
+		sourceLineageTag: Time Zone
+		summarizeBy: none
+		sourceColumn: Time Zone
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: b26d9a80-2b1d-4005-a285-0b4e19299e2d
+		sourceLineageTag: City
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: eeeb98ed-b776-479b-b111-bbcb09e7b1d6
+		sourceLineageTag: Country
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Airports = entity
+		mode: directLake
+		source
+			entityName: Airports
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Gold_Layer'
+

@@ -1,0 +1,38 @@
+table cities_delta
+	lineageTag: 4fc3de05-5ecf-4975-868d-355d4dcbe7ea
+	sourceLineageTag: [dbo].[cities_delta]
+
+	column id
+		dataType: string
+		lineageTag: da178d62-70da-448e-bc33-4b27c6a6f282
+		sourceLineageTag: id
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column country_id
+		dataType: string
+		lineageTag: fb74a69f-32ee-4115-8b30-a4cd2c9e7507
+		sourceLineageTag: country_id
+		summarizeBy: none
+		sourceColumn: country_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: a983e602-1eec-4986-b903-b68819f904fd
+		sourceLineageTag: name
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cities_delta = entity
+		mode: directLake
+		source
+			entityName: cities_delta
+			schemaName: dbo
+			expressionSource: 'DirectLake - LH_Silver_Layer'
+
