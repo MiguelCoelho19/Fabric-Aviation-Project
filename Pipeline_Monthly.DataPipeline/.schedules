@@ -7,7 +7,7 @@
       "configuration": {
         "type": "Monthly",
         "startDateTime": "2026-01-11T00:00:00",
-        "endDateTime": "2027-01-11T00:00:00",
+        "endDateTime": "2027-02-11T23:59:00",
         "localTimeZoneId": "GMT Standard Time",
         "times": [
           "01:30"
@@ -15,7 +15,7 @@
         "recurrence": 1,
         "occurrence": {
           "occurrenceType": "DayOfMonth",
-          "dayOfMonth": 21
+          "dayOfMonth": 7
         }
       }
     }
